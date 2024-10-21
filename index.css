@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Rancho&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+
+}
+
+.logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+#header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    background: #094665;
+    color: #fff;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, #094b69, transparent);
+    z-index: 10;
+
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#e3bc {
+    float: right;
+    left: 50%;
+}
+
+#e3c {
+    float: right;
+    left: 50%;
+    top: -10%;
+    object-fit: none;
+    z-index: 10;
+}
+
+section #text {
+    position: absolute;
+    color: #ffffff;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50%);
+    z-index: 99;
+
+}
+
+section #text span {
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+#btn {
+    text-decoration: dotted;
+    display: inline-block;
+    padding: 8px 30px;
+    background: beige;
+    color: #094665;
+    font-size: 1.2em;
+    font-weight: 500;
+    Letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #094665;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #fff;
+}
+
+
+.features {
+    height: 700px;
+    width: 100%;
+    z-index: 98;
+    position: relative;
+}
+
+.features img {
+    margin-left: 17%;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.features p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 15%;
+}
+
+
+
+.cinvid {
+    display: in;
+    height: 800px;
+    width: auto;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.boxvid {
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    justify-content: space-evenly;
+}
+
+.mbox {
+    height: 800px;
+    width: 29.2em;
+    border: 1px solid white;
+
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.big {
+    height: 700px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+    top: 60%;
+    margin-left: 10px;
+}
+
+.slider-container {
+    max-width: 110em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and Description */
+.slider-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.slider-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    /* Hide all slides by default */
+    width: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.slider-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.active {
+    display: block;
+    /* Show the active slide */
+}
+
+.juxtapose img {
+    margin-left: 20px;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #094665;
+    /* Dark grey background similar to the image */
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style-type: circle;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ddd;
+    /* Lighter grey on hover */
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-award,
+.footer-bbb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ddd;
+    /* Lighter grey on hover */
+}

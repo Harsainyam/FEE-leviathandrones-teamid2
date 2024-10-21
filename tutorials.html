@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviathan Drones: Tutorials</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon"
+        href="photos\man-diving-underwater-logo-design-vector-33862269-ai-brush-removebg-aqm9s27o.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* General Styles */
+        body,
+        html {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #002f3c;
+            transition: background-color 0.5s;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #80deea !important;
+        }
+
+
+        .logo {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        .main {
+            padding: 20px;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3%;
+        }
+
+        .img1 img {
+            width: 100%;
+            height: 100%;
+            margin-left: -50%;
+        }
+
+        .mainu {
+            margin-left: 20%;
+            margin-top: 10%;
+            font-family: "Josefin Sans", sans-serif;
+
+        }
+
+        .mainu h1 {
+            font-size: 60px;
+            font-family: "Josefin Sans", sans-serif;
+
+        }
+
+        .but1 button {
+            border: none;
+            text-decoration: none;
+            font-size: 30px;
+            background-color: transparent;
+            padding-left: 15px;
+            color: white;
+        }
+
+        .but1 {
+            background-color: #166891;
+            width: 250px;
+            border-radius: 30px;
+            box-shadow: 4px 4px 5px gray;
+            margin-left: 30%;
+            margin-top: -4%;
+        }
+
+        .but1:hover {
+            background-color: #0981bd;
+            color: rgb(228, 255, 188);
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .info-card {
+            background-color: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            height: 300px;
+            width: 400px;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card-number {
+            font-size: 50px;
+            color: #094665;
+            /* Green color */
+            font-weight: bold;
+        }
+
+        .info-card-text {
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .fintext {
+            text-align: center;
+            font-family: "Fira Sans", sans-serif;
+            font-size: 30px;
+        }
+
+        .fin {
+            background-color: rgb(248, 247, 247);
+        }
+
+        .finmain {
+            display: flex;
+            justify-content: center;
+        }
+
+        .fincard1 {
+            width: 600px;
+            margin-right: 100px;
+            text-align: center;
+        }
+
+        .fincard1 img {
+            border-radius: 30px;
+            width: 90%;
+        }
+
+        .imgdiv img {
+            width: 100%;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #094665;
+            /* Dark grey background similar to the image */
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-column ul {
+            list-style-type: circle;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ddd;
+            /* Lighter grey on hover */
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .footer-award,
+        .footer-bbb {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #ffffff;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .footer-social {
+            margin-top: 10px;
+        }
+
+        .footer-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #ddd;
+            /* Lighter grey on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="logo">L-Drones</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    9 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="mainu">
+            <h1><b>Build Your Own</b> <br> Underwater Drone</h1>
+            <p>Learn to build a high-performance underwater drone using tools you already have at home. </p>
+            <h3>Register for our FREE training to get started.</h3>
+        </div>
+        <div class="img1">
+            <img src="photos\Submarine.png" alt="">
+        </div>
+    </div>
+    <div class="but1">
+        <button>Lets get Started!</button>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center text-center mt-5">
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="info-card-number">1</div>
+                    <div class="info-card-text">You are not sure where to start?</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="info-card-number">2</div>
+                    <div class="info-card-text">You don’t have sufficient knowledge?</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="info-card-number">3</div>
+                    <div class="info-card-text">You don’t have the time to design it yourself?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="fin">
+        <br>
+        <br>
+        <div class="fintext">
+            <h1>What Will You Build</h1>
+            <p>Leviathan Drone is a fully functional ,3d printed underwater drone...</p>
+        </div>
+        <br>
+        <br>
+        <div class="finmain">
+            <div class="fincard1">
+                <h1><b>85 Meters Depth</b></h1>
+                <p>We’ve tested Drone 5 up to simulated pressure of 85 meters underwater. It’s possible with our own
+                    watertight endcap design.</p>
+                <img src="photos\85meters.png" alt="85meters.png">
+            </div>
+            <div class="fincard1">
+                <h1><b>3D Printed</b></h1>
+                <p>The majority of the drone is 3D printed – the entirety of the shell, propellers, mounts as well as
+                    water-proof endcaps.</p>
+                <img src="photos\3d printed.jpg" alt="3d printed.jpg">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="finmain">
+            <div class="fincard1">
+                <h1><b>Fast & Maneuverable</b></h1>
+                <p>With top speed of 2m/s, CPS 5 is really maneuverable. It also has active self-leveling</p>
+                <img src="photos\manuevaribitlty.jpg" alt="85meters.png">
+            </div>
+            <div class="fincard1">
+                <h1><b>Live Video Feed</b></h1>
+                <p>QGroundControl app displays all of the data and the 1080p live video feed from the drone’s camera
+                    onboard</p>
+                <img src="photos\qgroundcontrol.png" alt="3d printed.jpg">
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <div class="imgdiv">
+        <img src="photos\Screenshot 2024-09-01 193753.png" alt="photos\Screenshot 2024-09-01 193753.png">
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="index.html" class="logo">L-Drones</a>
+            </div>
+            <div class="footer-column">
+                <h4>What We Do</h4>
+                <ul>
+                    <li><a href="#" style=" font-size: 15px; font-weight: 600;">Our Story</a></li>
+                </ul>
+                <p>Email us at<br><a href="mailto:support@example.com"
+                        style="text-decoration:underline; color: white;">LeviathanDrones@gmail.com</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="how-it-works.html" style="  font-size: 15px; font-weight: 600;">Drones</a></li>
+                    <li><a href="about.html" style=" font-size: 15px; font-weight: 600;">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#" style=" font-size: 15px; font-weight: 600;">Call Us</a></li>
+                    <li><a href="#" style=" font-size: 15px; font-weight: 600;">Contact Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All Rights Reserved | Terms & Conditions | Privacy Policy | Disclaimer | Powered by DroneWe
+            </p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

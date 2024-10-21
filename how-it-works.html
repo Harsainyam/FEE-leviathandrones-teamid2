@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviathan Drones: Working</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="photos\man-diving-underwater-logo-design-vector-33862269-ai-brush-removebg-aqm9s27o.png">
+
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #002f3c;
+            transition: background-color 0.5s;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #80deea !important;
+        }
+
+        /* Header Section */
+        .header {
+            background: url('hiwbg.jpg') no-repeat center center/cover;
+            clip-path: polygon(50% 0%, 100% 0, 100% 100%, 83% 62%, 67% 100%, 51% 62%, 32% 99%, 15% 63%, 0 100%, 0 0);
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 2px;
+            animation: slideInFromLeft 2s ease;
+        }
+
+        /* Section Styles */
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+            margin-left: 30px;
+            width: 40%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #00a2ff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 30px;
+            color: #00a2ff;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        p, ul {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            color: black;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Button Styles */
+        .btn-custom {
+            background-color: #00a2ff;
+            color: black;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            animation: bounceIn 2s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #00b7ff;
+            transform: scale(1.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002f3c;
+            color: #e5e5e5;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #64ffda;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #80deea;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .logo
+{
+color: #ffffff;
+font-weight: 700;
+font-size: 2em;
+text-decoration: none;
+}   
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="logo">L-Drones</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" style="list-style-type:none;">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Explore the Depths</h1>
+    </div>
+<div class="maincon" style="display: flex;">
+    <!-- How It Works Section -->
+    <div class="container" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <h2><b>How Leviathan Drones Work</b></h2>
+        <p>
+            Leviathan Drones are equipped with state-of-the-art technology that allows them to navigate and explore underwater environments with precision and ease. Our drones use advanced sensors, powerful motors, and durable materials to withstand the challenges of underwater exploration.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li><strong>High-Resolution Cameras:</strong> Capture stunning underwater footage.</li>
+            <li><strong>Advanced Navigation System:</strong> Ensures accurate and stable movement.</li>
+            <li><strong>Durable Design:</strong> Built to withstand pressure and harsh conditions.</li>
+            <li><strong>Remote Control:</strong> Operate the drone from a distance with ease.</li>
+            <li><strong>Battery Life:</strong> Long-lasting power for extended exploration sessions.</li>
+        </ul>
+        <p>
+            Whether you're conducting research or just exploring for fun, Leviathan Drones provide the tools you need to dive deep and capture the underwater world like never before.
+        </p>
+        <div class="text-center">
+            <a href="shop.html" class="btn btn-custom">Shop Now</a>
+        </div>
+    </div>
+
+    <video src="videos\vevo_video2.mp4" style="width:57%;clip-path: ellipse(50% 42% at 50% 50%);"autoplay loop muted></video>
+
+</div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Leviathan Drones. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

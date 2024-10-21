@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Tailwind CSS Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+    <body class="bg-gray-100 font-sans">
+
+        <!-- Header -->
+        <header class="bg-white shadow">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-800">My Tailwind Page</h1>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Services</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="bg-blue-500 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-4">Welcome to My Website</h2>
+                <p class="text-lg mb-8">A simple webpage layout using Tailwind CSS.</p>
+                <a href="#" class="bg-white text-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get Started</a>
+            </div>
+        </section>
+    
+        <!-- Card Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-semibold mb-2">Card 1</h3>
+                        <p class="text-gray-700">This is a description for the first card. Tailwind CSS makes it easy to create beautiful designs.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-semibold mb-2">Card 2</h3>
+                        <p class="text-gray-700">This is a description for the second card. Tailwind CSS offers flexibility and customization.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h3 class="text-xl font-semibold mb-2">Card 3</h3>
+                        <p class="text-gray-700">This is a description for the third card. Create responsive and modern web pages easily.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="div1">
+            <form id="login" >
+                <input type="text" id="hlo">
+                <input type="password" id="hlo1">
+                <button type="submit" onclick="store()">Submit</button>
+            </form>
+        </div>
+    
+
+    
+    </body>
+    <script>
+        function store(){
+            var user = document.getElementById("hlo").value;
+            var Pass = document.getElementById("hlo1").value;
+            localStorage.setItem('username',user);
+            localStorage.setItem('Password',Pass);
+            }
+
+    </script>
+    </html>
+    

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="photos\man-diving-underwater-logo-design-vector-33862269-ai-brush-removebg-aqm9s27o.png">
+
+    <title>About Leviathan Drones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background-color: #f0f8ff;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #002f3c;
+            transition: background-color 0.5s;
+            z-index: 11;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #80deea !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            z-index: 11;
+            position: relative;
+            animation: fadeInDown 2s ease-in-out;
+        }
+
+        .hero p {
+		color:#ffeb3b;
+            font-size: 1.5rem;
+            z-index: 11;
+            position: relative;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffffff;
+            text-transform: uppercase;
+            position: relative;
+            margin-top: -100px;
+            font-weight: 700 ;
+            z-index: 12;
+            text-align: center;
+        }
+
+/* Animations for Title */
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* About Text Styling */
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about-text .highlight {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+/* About Image Styling */
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.animate-image {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.about-image {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 60px 0;
+            background-color: #eeeeee;
+            color: #f1c40f;
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .testimonials-section .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials-section .author {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            background-color: #002f3c;
+            text-align: center;
+            color: #f1c40f;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .logo
+{
+color: #ffffff;
+font-weight: 700;
+font-size: 2em;
+text-decoration: none;
+}
+.img1 video{
+    width: 100%;
+    position: absolute;
+    top: -54%;
+    z-index: 10;
+}
+.maindiv{
+    display: flex;
+}
+.maindiv1{
+    display: flex;
+    background-color: g ;
+}
+.div2{
+    margin-left: 100px;
+    width:500%; 
+}
+.div2 img{
+    border-radius: 30px;
+    box-shadow: 0px 0px 19px -6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+
+}
+.div3{
+    margin-right: 100px;
+    width: 400%;
+}
+.div3 img{
+    border-radius: 30px;
+    box-shadow: 0px 0px 19px -6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 98%;
+
+}
+.div1{
+    text-align: justify;
+    font-size: 20px;
+}
+.course{
+    text-decoration: underline;
+    color: black;
+}
+.course a{
+    color: black;
+    text-decoration: underline black;
+}
+.course a:hover{
+    color: rgb(100, 98, 98);
+    text-decoration: underline rgb(100, 98, 98);
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="logo">L-Drones</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-it-works.html">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="img1">
+        <video src="videos\2863422-uhd_3840_2160_24fps.mp4" autoplay muted loop></video>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Explore the Depths with Leviathan</h1>
+            <p>Discover the cutting-edge technology of our underwater drones.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <br>
+        <br>
+        <h2 class="section-title animate-title">About Leviathan Drones</h2> 
+        <br><br>
+        <div class="maindiv">
+            <div class="div1">
+                <p>We are a team of five passionate engineers and innovators committed to developing an affordable underwater drone for a wide range of applications, including marine exploration, environmental research, and underwater inspections. Driven by our goal to make underwater technology accessible to everyone, we are not only building a high-quality, cost-effective drone, but also offering an affordable course that teaches you how to build it yourself. Whether you prefer a hands-on approach or a ready-to-use product, you can join us in exploring the depths with cutting-edge technology designed for both professionals and enthusiasts alike.</p>
+                <div class="course">
+                    <p><a href="tutorials.html">Check out the Course -></a></p>
+                </div>
+            </div>
+            <div class="div2">
+                <img src="photos\aboutimg2.jpg" alt="">
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <div class="maindiv1">
+            <div class="div3">
+                <img src="photos\cps.png" alt="">
+            </div>
+            <div class="div1">
+                <p>Our courses are designed to be comprehensive yet easy to follow, providing you with all the knowledge and tools required to build your own underwater drone from scratch.By purchasing directly from us or taking our course, you’ll become a part of a growing community of underwater explorers, empowered with the skills to customize and innovate. Our mission is to inspire curiosity, support learning, and help you uncover the mysteries beneath the surface with confidence and ease. Join us, and let's dive into the future of underwater exploration together!</p>
+            </div>
+        </div><br><br><br>
+        <div class="maindiv1">
+            <div class="div1">
+                <p>In addition to our affordable courses, we also offer a range of high-quality parts and components that you can purchase directly from us. Whether you’re building your own underwater drone from scratch or looking to upgrade your existing setup, we have everything you need — from motors and controllers to waterproof cameras and hull materials.
+
+                    Our carefully selected parts are designed to ensure compatibility and performance, allowing you to assemble a reliable and efficient underwater drone. By sourcing your components directly from us, you’ll benefit from competitive pricing, expert guidance, and the confidence that each part meets our rigorous standards for underwater operations.
+                    
+                    Explore our shop and find all the essentials to bring your underwater drone to life — with the quality, affordability, and support that only we can provide.</p>
+            </div>
+            <div class="div2">
+                <img src="photos\wires.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+ 
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Leviathan Drones. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
