@@ -1,0 +1,101 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003b46;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .nav-links li a:hover {
+    color: #66a5ad;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.content h2 {
+    font-size: 32px;
+    color: #003b46;
+    margin-bottom: 20px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.video-box {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.video-box p {
+    margin-top: 10px;
+    color: #003b46;
+    font-size: 16px;
+}
+
+/* Style for the embedded videos */
+.video-box iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    /* For smaller screens, switch to 2 videos per row */
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    /* For mobile devices, switch to 1 video per row */
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

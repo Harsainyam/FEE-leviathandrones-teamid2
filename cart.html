@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Items</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Same as your existing dashboard) -->
+    <nav class="navbar">
+        <div class="logo">L-Drones</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Items -->
+    <div class="cart-container">
+        <h1>Your Cart Items</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Example Cart Item -->
+                <tr data-item-id="1">
+                    <td>Drone Model 1</td>
+                    <td>$500</td>
+                    <td>1</td>
+                    <td>$500</td>
+                    <td>
+                        <button class="buy-now-item">Buy Now</button>
+                        <button class="remove-item">Remove</button>
+                    </td>
+                </tr>
+                <tr data-item-id="2">
+                    <td>Drone Part 1</td>
+                    <td>$100</td>
+                    <td>2</td>
+                    <td>$200</td>
+                    <td>
+                        <button class="buy-now-item">Buy Now</button>
+                        <button class="remove-item">Remove</button>
+                    </td>
+                </tr>
+                <!-- More cart items can go here -->
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <h2>Total: <span id="total-price">$700</span></h2>
+            <button class="buy-all">Buy All Now</button>
+        </div>
+    </div>
+
+    <!-- Redirect to Billing Page and Remove Item Functionality -->
+    <script>
+        // Event listener for "Buy All" button
+        document.querySelector('.buy-all').addEventListener('click', function() {
+            window.location.href = 'billing.html';
+        });
+
+        // Event listener for individual "Buy Now" buttons
+        document.querySelectorAll('.buy-now-item').forEach(function(button) {
+            button.addEventListener('click', function() {
+                window.location.href = 'billing.html';
+            });
+        });
+
+        // Function to handle removal of cart items
+        document.querySelectorAll('.remove-item').forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Get the row (item) to be removed
+                const itemRow = this.closest('tr');
+                const itemId = itemRow.getAttribute('data-item-id');
+                
+                // Remove the row from the table
+                itemRow.remove();
+
+                // Update the total price after removing the item
+                updateTotalPrice();
+            });
+        });
+
+        // Function to update the total price
+        function updateTotalPrice() {
+            let totalPrice = 0;
+            const cartItems = document.querySelectorAll('#cart-items tr');
+            
+            cartItems.forEach(function(item) {
+                const priceText = item.querySelector('td:nth-child(4)').textContent;
+                const itemPrice = parseFloat(priceText.replace('$', ''));
+                totalPrice += itemPrice;
+            });
+
+            // Update the displayed total price
+            document.getElementById('total-price').textContent = `$${totalPrice}`;
+        }
+    </script>
+</body>
+</html>
