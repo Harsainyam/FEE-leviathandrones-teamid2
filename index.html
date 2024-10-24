@@ -19,22 +19,51 @@
 </head>
 
 <body>
-   <video src="6061-188582318.mp4" autoplay loop muted style="position: absolute; opacity:75%;"></video>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <!-- Close button -->
+            <span class="close">&times;</span>
+            <h2>Please Login or Sign Up to Continue</h2>
+
+            <div class="modal-buttons">
+                <button id="loginBtn" class="btn">Login</button>
+                <button id="signupBtn" class="btn">Sign Up</button>
+            </div>
+        </div>
+
+    </div>
+    <video src="6061-188582318.mp4" autoplay loop muted style="position: absolute; opacity:75%;"></video>
     <header id="header">
         <a href="#" class="logo" style="font-family:'Rancho',cursive; font-size: 50px;">L-Drones</a>
-         <ul>
+        <ul>
 
-            <li><a href="#" class="active" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Home</a></li>
-            <li class="nav-item" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a class="nav-link" href="how-it-works.html">How it works</a></li>
-            <li class="nav-item" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-            <li class="nav-item" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a href="#" class="active"
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Home</a>
+            </li>
+            <li class="nav-item"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <a class="nav-link" href="how-it-works.html">How it works</a>
+            </li>
+            <li class="nav-item"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <a class="nav-link" href="tutorials.html">Tutorials</a>
+            </li>
+            <li class="nav-item"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item"
+                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
 
         </ul>
     </header>
     <section>
         <h2 id="text"><span>Reach new depths </span><br>Leviathan Drones</h2>
-        <a href="about.html" id="btn">Explore</a>
+        <a href=".\about.html" id="btn">Explore</a>
         <img src="photos\e3a.png" id="e3a">
         <img src="photos\e3c.png" id="e3c">
         <img src="photos\e3bc.png" id="e3bc">
@@ -56,7 +85,8 @@
 
     <div class="sec">
         <h2> Let's DIVE in</h2>
-        <p style="text-align: justify;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <p
+            style="text-align: justify;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
             The term "Leviathan" originates from ancient mythology and the Bible, where it refers to a massive sea
             creature, often depicted as a monstrous, serpentine beast. Over time, the term has come to symbolize
             something extremely large and powerful, often in a metaphorical sense.</br><br>Leviathan Drones is a pioneer
@@ -183,7 +213,8 @@
     <hr>
 
     <!-- Footer Section -->
-    <footer class="footer" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <footer class="footer"
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         <div class="footer-container">
             <div class="footer-column">
                 <a href="#" class="logo">L-Drones</a>
@@ -238,12 +269,10 @@
         window.addEventListener('scroll', function () {
             let value = window.scrollY;
             text.style.top = 40 + value * -0.5 + '%';
-            // text.style.translate = value*0.1 + '%';
             e3a.style.left = 0 + value * -0.1 + '%';
             e3bc.style.left = 50 + value * 0.3 + '%';
             e3c.style.left = 50 + value * 0.1 + '%';
             uw.style.left = 0 + value * 0.6 + '%';
-
         });
 
         // JavaScript for Slider Functionality
@@ -279,35 +308,87 @@
         let video12 = document.getElementById("video12");
         let video13 = document.getElementById("video13");
         let video14 = document.getElementById("video14");
+
         box1.addEventListener('mouseover', function () {
             video11.style.display = "inline-block";
             video12.style.display = "none";
             video13.style.display = "none";
             video14.style.display = "none";
-        })
+        });
+
         box2.addEventListener('mouseover', function () {
             video11.style.display = "none";
             video12.style.display = "inline-block";
             video13.style.display = "none";
             video14.style.display = "none";
+        });
 
-        })
         box3.addEventListener('mouseover', function () {
             video11.style.display = "none";
             video12.style.display = "none";
             video13.style.display = "inline-block";
             video14.style.display = "none";
-        })
+        });
+
         box4.addEventListener('mouseover', function () {
             video11.style.display = "none";
             video12.style.display = "none";
             video13.style.display = "none";
             video14.style.display = "inline-block";
-
-        })
+        });
 
         let big = document.getElementById("big");
 
+        // Get modal element
+        var modal = document.getElementById("myModal");
+
+        // Get close button (the cross "X")
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Get login and signup buttons
+        var loginBtn = document.getElementById("loginBtn");
+        var signupBtn = document.getElementById("signupBtn");
+
+        // Open modal automatically after 5 seconds on window load (if the modal has not been shown before)
+        window.onload = function () {
+            const shouldShowModal = localStorage.getItem('showSignupModal');
+
+            // Show the modal only if it hasn't been shown before
+            if (shouldShowModal) {
+                setTimeout(function () {
+                    modal.style.display = "block";
+                }, 1000);
+            }
+            else if (shouldShowModal === null || shouldShowModal === 'false') {
+                modal.style.display = "none";
+        }}
+
+        // Close modal on close button (X) click
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+            // Store in localStorage that the user has seen the modal
+            localStorage.setItem('showSignupModal', 'true');
+        }
+
+        // Close modal if user clicks outside of modal content
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                // Store in localStorage that the user has seen the modal
+                localStorage.setItem('showSignupModal', 'true');
+            }
+        }
+
+        // Redirect to login page on login button click
+        loginBtn.onclick = function () {
+            window.location.href = "login.html"; // Replace with your login page URL
+        }
+
+        // Redirect to signup page on signup button click
+        signupBtn.onclick = function () {
+            localStorage.setItem('showSignupModal', 'false'); // Set the flag to prevent modal from showing again
+            window.location.href = "signup.html"; // Replace with your signup page URL
+        }
 
 
     </script>

@@ -114,7 +114,6 @@ section #text {
     line-height: 0.55em;
     font-family: 'Rancho', cursive;
     transform: translateY(-50%);
-    z-index: 99;
 
 }
 
@@ -192,7 +191,6 @@ section #text span {
 .boxvid {
     display: flex;
     position: absolute;
-    z-index: 99;
     justify-content: space-evenly;
 }
 
@@ -367,4 +365,74 @@ section #text span {
 .footer-social a:hover {
     color: #ddd;
     /* Lighter grey on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    z-index:97;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    left: 40em;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    position:absolute;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close:hover, .close:focus {
+    color: black;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#loginBtn {
+    background-color: #4CAF50;
+
+    color: white;
+}
+
+#signupBtn {
+    background-color: #2196F3;
+
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }

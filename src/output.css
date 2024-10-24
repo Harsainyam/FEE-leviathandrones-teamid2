@@ -667,7 +667,6 @@ section #text {
   line-height: 0.55em;
   font-family: 'Rancho', cursive;
   transform: translateY(-50%);
-  z-index: 99;
 }
 
 section #text span {

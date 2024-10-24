@@ -5,18 +5,18 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const app = express();
 
-
-// Serve static files (like CSS, images, etc.)
-app.use(express.static('public'));
+// Serve static files (CSS, JS, images) from 'fee2' directory
+app.use(express.static(path.join(__dirname, )));
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());  // For handling JSON form submissions
 
 // Database connection
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Kipscse@120306',
+    password: 'SINGH',
     database: 'user_data'
 });
 
@@ -25,81 +25,89 @@ db.connect((err) => {
     console.log('Connected to MySQL Database.');
 });
 
-// GET route to serve signup page
-app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname, 'signup.html')); // Make sure signup.html exists in the same folder
+// Route to serve the home page (index.html)
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname,  'index.html'));  // Make sure 'index.html' exists in 'fee2'
 });
 
-// POST route to handle form submission (signing up)
+// Route to serve the signup page
+app.get('/signup', (req, res) => {
+    res.sendFile(path.join(__dirname,  'signup.html'));  // Ensure 'signup.html' exists in 'fee2'
+});
+
+// POST route to handle signup form submission
+// POST route to handle signup form submission
 app.post('/signup', (req, res) => {
     const { username, email, password } = req.body;
-
-    // Hash the password before storing it in the database
     const hashedPassword = bcrypt.hashSync(password, 10);
 
     const sql = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
     db.query(sql, [username, email, hashedPassword], (err, result) => {
         if (err) {
             console.log(err);
-            return res.send('Error registering user.');
+            return res.json({ success: false, message: 'Error registering user.' });
         }
-        res.send('User registered successfully.');
+        res.json({ success: true, message: 'User registered successfully.' });
     });
 });
 
-app.use(express.json()); // Add this line
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-
-const db1 = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Kipscse@120306',
-    database: 'user_data'
-});
 
 
-// GET route to serve login page
+
+
+
+// Route to serve the login page
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'login.html')); // Make sure login.html exists in the same folder
+    res.sendFile(path.join(__dirname,  'login.html'));  // Ensure 'login.html' exists in 'fee2'
 });
 
-
-// POST route to handle login requests
-// POST route to handle login requests
+// POST route to handle login form submission
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    // SQL query to find the user by username
+    if (!username || !password) {
+        return res.status(400).json({ success: false, message: 'Please provide both username and password' });
+    }
+
     const sql = 'SELECT * FROM users WHERE username = ?';
-    db1.query(sql, [username], (err, results) => {
+    db.query(sql, [username], (err, results) => {
         if (err) {
             console.log(err);
             return res.status(500).send('Error logging in.');
         }
 
-        console.log(results); // This will show the result of the query
         if (results.length > 0) {
             const user = results[0];
-            // Compare the password with the hashed password
+
             if (bcrypt.compareSync(password, user.password)) {
-                // Successful login
                 return res.json({ success: true, message: `Welcome, ${user.username}` });
             } else {
-                // Incorrect password
                 return res.json({ success: false, message: 'Incorrect password. Please try again.' });
             }
         } else {
-            // User not found
             return res.json({ success: false, message: 'User not found. Please register.' });
-            console.log(results); // This will show the result of the query
         }
     });
 });
 
+// Add other routes to serve different pages of your website (if you have multiple pages)
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname,  'about.html'));  // Example route for 'about.html'
+});
 
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname,  'contact.html'));  // Example route for 'contact.html'
+});
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname,  'how-it-works.html'));  // Example route for 'contact.html'
+});
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname,  'tutorial.html'));  // Example route for 'contact.html'
+});
 
-// Start the server
+// Add more routes for other HTML pages as needed...
+
+// Start the server on port 3000
 app.listen(3000, () => {
     console.log('Server running on port 3000');
 });

@@ -9,5 +9,3 @@ CREATE TABLE users (
 );
 use user_data;
 select * from users;
-TRUNCATE table users;
-'2', 'user', 'user@gmail.com', '$2a$10$KMYhEVecgErZoTStq4vgKeCrbavU7XAutFZo008jCOWa60IoQpxJi', '2024-10-21 10:37:18'
