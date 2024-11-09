@@ -1,0 +1,27 @@
+.billing-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .billing-page h1 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  .billing-page .form-label {
+    font-weight: 500;
+  }
+  
+  .billing-page .form-control {
+    border-radius: 4px;
+  }
+  
+  .billing-page .btn-primary {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
