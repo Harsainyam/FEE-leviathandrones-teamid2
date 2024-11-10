@@ -4,9 +4,9 @@ import { Modal, Button } from "react-bootstrap";
 import "./ItemList.css";
 
 const items = [
-  { id: 1, name: "Drone Model A", price: 299, imgSrc: "path_to_image1.jpg", description: "High-performance drone for underwater exploration." },
-  { id: 2, name: "Drone Model B", price: 499, imgSrc: "path_to_image2.jpg", description: "Advanced drone with extended battery life." },
-  { id: 3, name: "Drone Model C", price: 399, imgSrc: "path_to_image3.jpg", description: "Compact and lightweight drone for versatile use." },
+  { id: 1, name: "Drone Part A", price: 5000, imgSrc: "path_to_image1.jpg", description: "High-performance drone for underwater exploration." },
+  { id: 2, name: "Drone Part B", price: 499, imgSrc: "path_to_image2.jpg", description: "Advanced drone with extended battery life." },
+  { id: 3, name: "Drone Part C", price: 399, imgSrc: "path_to_image3.jpg", description: "Compact and lightweight drone for versatile use." },
 ];
 
 function ItemList() {
