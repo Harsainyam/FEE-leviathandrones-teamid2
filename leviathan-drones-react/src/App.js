@@ -8,7 +8,7 @@ import Billing from "./pages/Billing";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react">
       <nav>
         <Link to="/">Home</Link>
       </nav>

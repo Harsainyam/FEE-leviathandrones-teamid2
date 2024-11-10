@@ -5,8 +5,8 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const app = express();
 
-// Serve static files (CSS, JS, images) from 'fee2' directory
-app.use(express.static(path.join(__dirname, )));
+// Serve static files (CSS, JS, images) from root directory
+app.use(express.static(path.join(__dirname)));
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,17 +25,35 @@ db.connect((err) => {
     console.log('Connected to MySQL Database.');
 });
 
-// Route to serve the home page (index.html)
+// Serve HTML files for specific routes
 app.get('/index', (req, res) => {
-    res.sendFile(path.join(__dirname,  'index.html'));  // Make sure 'index.html' exists in 'fee2'
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Route to serve the signup page
 app.get('/signup', (req, res) => {
-    res.sendFile(path.join(__dirname,  'signup.html'));  // Ensure 'signup.html' exists in 'fee2'
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
-// POST route to handle signup form submission
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'about.html'));
+});
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'contact.html'));
+});
+
+app.get('/how-it-works', (req, res) => {
+    res.sendFile(path.join(__dirname, 'how-it-works.html'));
+});
+
+app.get('/tutorial', (req, res) => {
+    res.sendFile(path.join(__dirname, 'tutorial.html'));
+});
+
 // POST route to handle signup form submission
 app.post('/signup', (req, res) => {
     const { username, email, password } = req.body;
@@ -49,16 +67,6 @@ app.post('/signup', (req, res) => {
         }
         res.json({ success: true, message: 'User registered successfully.' });
     });
-});
-
-
-
-
-
-
-// Route to serve the login page
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname,  'login.html'));  // Ensure 'login.html' exists in 'fee2'
 });
 
 // POST route to handle login form submission
@@ -78,7 +86,6 @@ app.post('/login', (req, res) => {
 
         if (results.length > 0) {
             const user = results[0];
-
             if (bcrypt.compareSync(password, user.password)) {
                 return res.json({ success: true, message: `Welcome, ${user.username}` });
             } else {
@@ -90,24 +97,14 @@ app.post('/login', (req, res) => {
     });
 });
 
-// Add other routes to serve different pages of your website (if you have multiple pages)
-app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname,  'about.html'));  // Example route for 'about.html'
-});
+// Serve the React app for any route prefixed with /app
+app.use('/app', express.static(path.join(__dirname, 'leviathan-drones-react/build')));
 
-app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname,  'contact.html'));  // Example route for 'contact.html'
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'leviathan-drones-react', 'build', 'index.html'));
 });
-app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname,  'how-it-works.html'));  // Example route for 'contact.html'
-});
-app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname,  'tutorial.html'));  // Example route for 'contact.html'
-});
-
-// Add more routes for other HTML pages as needed...
 
 // Start the server on port 3000
 app.listen(3000, () => {
-    console.log('Server running on port 3000');
+    console.log('Server running on http://localhost:3000');
 });
